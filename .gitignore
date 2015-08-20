@@ -4,3 +4,6 @@
 *.txt~
 *.html~
 *.css~
+*.~
+pybursa/local_settings.py
+
