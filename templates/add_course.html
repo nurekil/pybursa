@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+
+{% block title %} PythonClasses | Добавление нового курса |{% endblock %}
+
+
+{% block nav_class_student %} active {% endblock %}
+
+
+{% block content %}
+<div class="container">
+  <div class="jumbotron">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="panel-heading"><h2>Добавление нового курса</h2></div>
+      <div class="panel-body">
+
+        <div class="row" style="margin-top:30px; margin-left:30px">
+          <form method="post">
+            {% csrf_token %}
+            <table class="form">
+              {{ form.as_table }}   
+            </table>
+            <input type="submit" value="Добавить" class="btn btn-success">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>  
+</div>
+
+  
+{% endblock %}

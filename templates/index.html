@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+
+{% block title %} PythonClasses | Главная |{% endblock %}
+
+
+{% block nav_class_main %} active {% endblock %}
+
+
+{% block content %}
+  <div class="container" style="margin-bottom:30px">
+
+      {% if messages %}
+          <p class="messages">
+              {% for message in messages %}
+                  <div class="alert alert-success" role="alert">{{ message }}</div>
+              {% endfor %}
+          </p>
+      {% endif %}
+
+
+    <div class="jumbotron" > 
+      <h1>PythonClasses</h1>
+      <p class='indent'>
+        Cтремительный рост объема информации требует все больше специалистов для ее обработки и выведения
+         пользователям.
+      </p>
+      <p class='indent'>
+      	Наши курсы помогут освоить перспективные языки программирования и фреймворки, позволяя вам оставаться 
+     	в тренде современного web программирования.
+      </p> 
+      <p class='indent'>
+      	Отличительными особенностями наших курсов являются индивидуальное ведение каждого студента и разнообразие 
+        практических заданий. 
+      </p>
+
+    
+    </div>
+
+<caption><h2 class="indent">Выбери курсы, которые хочешь освоить:</h2></caption>
+
+<div class="table">
+  <div class="table-responsive">
+  <table class="table table-bordered table table-condensed">
+      <tbody>
+        <tr>
+          <th>
+            Курс
+          </th>
+          <th>
+            Описание
+          </th>
+          <th>
+              
+          </th>
+        </tr>
+        {% for course in courses %}
+        <tr>
+          <td><a href="{% url 'courses:courseinfo' forloop.counter %}">{{ course.title|upper }}</a>
+          </td>
+          <td>
+            {{ course.about }}
+          </td>
+          <td>
+            <p>
+            <a href="{% url 'courses:edit_course' course.id %}">
+              <button class="btn btn-primary" type="button">
+                <span class="glyphicon glyphicon-pencil"> </span> Изменить
+              </button>
+            </a>
+            </p>
+            <p>
+            <a href="{% url 'courses:delete_course' course.id %}">
+              <button class="btn btn-primary" type="button">
+                <span class="glyphicon glyphicon-erase"> </span> Удалить
+              </button>
+            </a>
+            </p>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>  
+</div>
+
+          <a href="{% url 'courses:add_course' %}">
+        <button class="btn btn-primary" type="button">
+          <span class="glyphicon glyphicon-plus"> </span> Добавить курс
+        </button>
+      </a>
+
+  </div><!-- /.container -->
+{% endblock %}

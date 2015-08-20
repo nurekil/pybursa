@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+
+
+{% block title %} PythonClasses | Главная |{% endblock %}
+
+
+{% block nav_class_main %} active {% endblock %}
+
+
+{% block content %}
+  <div class="container">
+     <div class="jumbotron"> 
+      <p id="err404">404 Page not found :(</p>
+      <p id="err_explaining">
+        Запрашиваемый Вами адрес не найден <br>
+        Перейти <a href="{% url 'index' %}">на главную...</a> 
+      </p>
+    </div>
+  </div>
+
+{% endblock %}

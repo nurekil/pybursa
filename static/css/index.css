@@ -1,0 +1,67 @@
+p.indent{
+	text-indent: 30px;
+	text-align: justify;
+	margin-top: 5px;
+	font-size: 20px;
+}
+
+h2.indent{
+	text-indent: 30px;
+}
+
+tbody{
+	background-color: #fff;
+}
+img.photo{
+	margin-top: 5px;
+	height: 129px;
+	border: 3px double #eee;
+	border-radius: 1px;
+}
+
+td.just{
+	text-align: justify;
+}
+
+.external{
+    padding-left: 10px;
+    color: #333;
+}
+
+p.students{
+	font-size: 14px;
+}
+
+table.form{ 
+	border-collapse: separate;
+	border-spacing: 10px;
+}
+
+table.form th {
+	vertical-align: top;
+}
+
+#err404{
+	margin: 0 auto;
+	word-wrap: normal;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 3em;
+}
+
+#err_explaining{
+	margin: 30px 0px 30px 0px;
+}
+
+#id_message, #id_more_info, #id_about{
+	max-width: 825px;
+}
+
+
+
+/*mobile*/
+@media only screen and (max-width: 570px) {
+
+	#id_more_info, #id_about, #id_message, #id_mailer, #id_resp_email, #id_theme, #id_title, #id_num{
+		max-width: 145px;
+	}
+}
