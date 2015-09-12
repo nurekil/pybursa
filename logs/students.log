@@ -469,3 +469,39 @@ Function: StudentDetailView
 Message: Check again. There can be an error! | student detail
 
 
+WARNING 2015-09-12 00:28:54,964 
+Module: views 
+Function: StudentDetailView 
+Message: Hey you. Pay attention! | student detail
+
+
+ERROR 2015-09-12 00:28:54,964 
+Module: views 
+Function: StudentDetailView 
+Message: Check again. There can be an error! | student detail
+
+
+WARNING 2015-09-12 00:29:28,134 
+Module: views 
+Function: StudentDetailView 
+Message: Hey you. Pay attention! | student detail
+
+
+ERROR 2015-09-12 00:29:28,134 
+Module: views 
+Function: StudentDetailView 
+Message: Check again. There can be an error! | student detail
+
+
+WARNING 2015-09-12 03:54:16,057 
+Module: views 
+Function: StudentDetailView 
+Message: Hey you. Pay attention! | student detail
+
+
+ERROR 2015-09-12 03:54:16,086 
+Module: views 
+Function: StudentDetailView 
+Message: Check again. There can be an error! | student detail
+
+
